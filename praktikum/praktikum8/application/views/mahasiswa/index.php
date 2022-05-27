@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahasiswa</title>
+    <?php
+    $username = $this->session->userdata('username');
+    if ($username) {
+        echo "<h2>Selamat Datang $username</h2>";
+    }
+     
+    ?>
 </head>
 <body>
     <div class="col-md-12">

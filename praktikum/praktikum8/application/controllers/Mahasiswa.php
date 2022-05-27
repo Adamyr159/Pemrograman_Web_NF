@@ -17,9 +17,17 @@ class Mahasiswa extends CI_Controller{
         $this->load->model('Mahasiswa_model');
         $siswa = $this->Mahasiswa_model->getById($id);
         $data['siswa'] = $siswa;
+
+        // render data dan kirim data ke dalam view
         $this->load->view('layouts/header');
         $this->load->view('mahasiswa/detail', $data);
         $this->load->view('layouts/footer');
+    }
+    public function __construct(){
+        parent::__construct();
+        if(!$this->session->userdata('logged_in')){
+            redirect('/login');
+        }
     }
 }
 ?>
