@@ -33,6 +33,29 @@
             </tr>
         </tbody>
     </table>
+    <div class="col-md-5 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <img src="<?=base_url();?>uploads/photos/<?=$siswa->id?>.jpg" alt="Foto <?=$siswa->nama;?>Tidak Ditemukan" width="300">
+                    <div class="mt-4">
+                        <h4><?=$siswa->nama?></h4>
+                        <p>Foto Mahasiswa</p>
+                        <?= $error;?>
+                        <br>
+                        <a href="https://www.instagram.com/Adamyr159" target="_blank">
+                            <button class="btn btn-outline-info">INSTAGRAM</button>
+                        </a>
+                        <?=form_open_multipart('mahasiswa/upload');?>
+                            <input type="file" name="foto" size="300">
+                            <input type="hidden" name="idmahasiswa" value="<?=$siswa->id;?>">
+                            <input type="submit" value="Upload Foto" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 </html>

@@ -23,10 +23,12 @@
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">
-        <h5>E-Learning STT-NF</h5>
+        <a href="<?= base_url('index.php/home/index')?>">
+          <h5>E-Learning STT-NF</h5>
+        </a>
       </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="<?= base_url('index.php/home/index')?>" class="list-group-item list-group-item-action bg-light">Dashboard</a>
         <a href="<?= base_url('index.php/mahasiswa/index'); ?>" class="list-group-item list-group-item-action bg-light">Mahasiswa</a>
         <a href="<?= base_url('index.php/dosen/index'); ?>" class="list-group-item list-group-item-action bg-light">Dosen</a>
         <a href="<?= base_url('index.php/matakuliah/index'); ?>" class="list-group-item list-group-item-action bg-light">Matakuliah</a>
